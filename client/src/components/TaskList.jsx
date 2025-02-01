@@ -35,10 +35,17 @@ const TaskList = () => {
   }, []);
 
   return (
-    <div className="task-list">
-      <div class="flex justify-between items-center">
-        <h1>Your Tasks</h1>
-        <button onClick={() => navigate("/add-task")}>Add New Task</button>
+    <div className="task-list flex flex-col items-center">
+      <div class="flex justify-between items-center w-[95%]">
+        <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-500 to-indigo-500 text-transparent bg-clip-text text-center">
+          Your Tasks
+        </h1>
+        <button
+          onClick={() => navigate("/add-task")}
+          className="bg-[#28a745] px-[15px] py-[10px] my-5 border-none rounded-[5px] text-white cursor-pointer hover:bg-[#218838]"
+        >
+          Add New Task
+        </button>
       </div>
       {tasks.length > 0 ? (
         tasks.map((task) => (

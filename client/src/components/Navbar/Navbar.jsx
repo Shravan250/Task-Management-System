@@ -31,7 +31,7 @@ const Navbar = () => {
       <div className="select-none relative container mx-auto flex p-5 items-center justify-between">
         <div className={styles.logo}>
           <Link to="/">
-            <h2 className="text-5xl cursor-pointer">
+            <h2 className="text-4xl md:text-5xl cursor-pointer">
               <span className="text-[#FF004F]">Task</span> Management.
             </h2>
           </Link>
@@ -44,7 +44,7 @@ const Navbar = () => {
               styles.black_gradient
             )}
           >
-            {["Home", "Login", "Add-Task"].map((tab) => (
+            {["Home", "Login", "Add-Task", "Profile"].map((tab) => (
               <li key={tab}>
                 <Link
                   className={clsx(

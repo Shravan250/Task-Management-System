@@ -36,22 +36,31 @@ const AddTask = () => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
-      <input
-        type="text"
-        placeholder="Description"
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
-        required
-      />
-      <input
-        type="date"
-        value={date}
-        onChange={(e) => setDate(e.target.value)}
-        required
-      />
-      <button type="submit">Add Task</button>
-    </form>
+    <div className="task-list flex flex-col items-center w-[90%]">
+      <form onSubmit={onSubmit} className="w-full">
+        <input
+          type="text"
+          className="px-4 py-2 border rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+          placeholder="Description"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          required
+        />
+        <input
+          type="date"
+          className="px-4 py-2 border rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+          value={date}
+          onChange={(e) => setDate(e.target.value)}
+          required
+        />
+        <button
+          type="submit"
+          className="bg-[#28a745] px-[15px] py-[10px] my-5 border-none rounded-[5px] text-white cursor-pointer hover:bg-[#218838] float-end"
+        >
+          Add Task
+        </button>
+      </form>
+    </div>
   );
 };
 
