@@ -84,7 +84,7 @@ export default function Profile() {
           <input
             type="text"
             className="px-4 py-2 border rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-            placeholder="Username"
+            placeholder={currentUser.username}
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
